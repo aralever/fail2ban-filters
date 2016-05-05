@@ -4,15 +4,15 @@ maxretry = 3
 ignoreip = 127.0.0.1/8 80.32.127.48
 
 destemail = root
-sender = fail2ban@bioiberica1.ixole.es
+sender = fail2ban@example.com
 
 [sshd]
 enabled = true
-port	= 27975
+port	= 22
 
 [sshd-ddos]
 enabled = true
-port    = 27975
+port    = 22
 
 [apache-auth]
 enabled = true
