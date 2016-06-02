@@ -66,4 +66,11 @@ findtime = 300
 bantime  = 600
 #action   = iptables[name=HTTP, port=http, protocol=tcp]
 
+[wp-auth]
+enabled = true
+port    = http,https
+filter  = wp-auth
+logpath = %(apache_access_log)s
+bantime = 1200
+maxretry = 8
 
