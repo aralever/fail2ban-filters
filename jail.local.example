@@ -61,7 +61,7 @@ enabled  = true
 port     = http,https
 filter   = apache-getdos
 logpath  = %(apache_access_log)s
-maxretry = 300
+maxretry = 600
 findtime = 300
 bantime  = 600
 #action   = iptables[name=HTTP, port=http, protocol=tcp]
