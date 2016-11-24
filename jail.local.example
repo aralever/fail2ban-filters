@@ -71,6 +71,12 @@ enabled = true
 port    = http,https
 filter  = wp-auth
 logpath = %(apache_access_log)s
-bantime = 1200
 maxretry = 8
+
+[wp-xmlrpc]
+enabled = true
+port    = http,https
+filter  = wp-xmlrpc
+logpath = %(apache_access_log)s
+maxretry = 4
 
