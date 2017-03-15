@@ -14,6 +14,10 @@ port	= 22
 enabled = true
 port    = 22
 
+[pure-ftpd]
+enabled  = true
+maxretry = 3
+
 [apache-auth]
 enabled = true
 
@@ -38,10 +42,6 @@ enabled = true
 [apache-shellshock]
 enabled = true
 
-[pure-ftpd]
-enabled	 = true
-maxretry = 3
-
 [apache-phpmyadmin]
 enabled  = true
 port     = http,https
@@ -53,11 +53,11 @@ maxretry = 3
 enabled  = true
 filter   = apache-postflood
 logpath  = %(apache_access_log)s
-findtime = 10
-maxretry = 10
+findtime = 20
+maxretry = 20
 
 [apache-getdos]
-enabled  = true
+enabled  = false
 port     = http,https
 filter   = apache-getdos
 logpath  = %(apache_access_log)s
