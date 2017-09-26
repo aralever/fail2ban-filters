@@ -53,18 +53,18 @@ maxretry = 3
 enabled  = true
 filter   = apache-postflood
 logpath  = %(apache_access_log)s
-findtime = 20
-maxretry = 20
+findtime = 60
+maxretry = 29
+bantime  = 300
 
 [apache-getdos]
 enabled  = false
 port     = http,https
 filter   = apache-getdos
 logpath  = %(apache_access_log)s
-maxretry = 600
-findtime = 300
-bantime  = 600
-#action   = iptables[name=HTTP, port=http, protocol=tcp]
+maxretry = 30
+findtime = 60
+bantime  = 300
 
 [wp-auth]
 enabled = true
